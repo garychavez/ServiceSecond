@@ -17,12 +17,12 @@ public class MSStudentsController {
 	@Autowired
 	private MSStudentsService msStudentsService;
 	
-	@GetMapping("/listar")
+	@GetMapping("/get")
 	public List<MSStudents> listar(){
 		return msStudentsService.finAll();
 	}
 	
-	@GetMapping("Get/{id}/Date/{date}")
+	@GetMapping("get/{id}/Date/{date}")
 	public MSStudents detalle(@PathVariable Integer id,@PathVariable Date date) {
 		return msStudentsService.finById(id, date);
 		
