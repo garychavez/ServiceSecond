@@ -22,7 +22,7 @@ public class MSStudentsController {
 		return msStudentsService.finAll();
 	}
 	
-	@GetMapping("get/{id}/Date/{date}")
+	@GetMapping("get/{id}/date/{date}")
 	public MSStudents detalle(@PathVariable Integer id,@PathVariable Date date) {
 		return msStudentsService.finById(id, date);
 		
